@@ -21,7 +21,7 @@ StarRating.propTypes = {
     className: PropTypes.string,
     onSetRating: PropTypes.func
 }
-export default function StarRating({maxRating = 5, color = "#fcc419", size = 48, className = "", messages = [], defaultRating = 0, onSetRating}) {
+export default function StarRating({maxRating = 5, color = "#fcc419", size = 48, className = "", messages = [], defaultRating = 0, onSetRating = () => {}}) {
     
     const [rating, setRating] = useState(defaultRating);
     const [tempRating, setTempRating] = useState(0);
